@@ -52,7 +52,7 @@ jQuery(function($){
     $('input[type=tel]').inputmask({'mask' : '+7 (999) 999-99-99'});
 
     
-    $('.link-section').on('click','a',function(e){e.preventDefault();$('body, html').stop().animate({scrollTop:$($(this).attr('href')).offset().top},400);});
+    $('.law-head .center').on('click','a',function(e){e.preventDefault();$('body, html').stop().animate({scrollTop:$($(this).attr('href')).offset().top},400);});
 
 
     $.fn.animate_Text=function(){
@@ -103,24 +103,17 @@ jQuery(function($){
 
 
         $('section').each(function(){
-            if (wScroll > $(this).offset().top - 600) {
+            if (wScroll > $(this).offset().top - 700) {
                 $(this).animate({'opacity':1},700)
             }
         })
 
         $('.faq>div, .faq>h3').each(function(){
-            if (wScroll > $(this).offset().top - 500) {
+            if (wScroll > $(this).offset().top - 800) {
                 $(this).animate({'opacity':1},700)
             }
         })
         
-    });
-    
-
-    var scene = $('#scene').get(0);
-
-    var parallaxInstance = new Parallax(scene, {
-        scalarY : 5
     });
 
 });
